@@ -149,37 +149,13 @@ def add_wikipedia(input_df: pd.DataFrame) -> pd.DataFrame:
 labels_to_sci = load_label_to_scientific()
 class_labels = sorted(list(labels_to_sci.keys()))
 # ---------------------------------- SideBar ----------------------------------
-
-st.sidebar.title('What is "What Bird is That?"')
-st.sidebar.write('''
-"What Bird is That?" is a **CNN Image Classification Model** which identifies the type of bird in an image. 
-
-It can accurately identify over 500 different types of birds!
-
-It was developed using close to 100,000 photos of birds using for transfer learning and fine-tuning of a pre-trained Image Classification Model.
-
-
-''')
-# **Accuracy :** **`ENTER FINAL ACCURACY HERE`**
-#
-# **Model :** **`EfficientNetB4`**
-
-st.sidebar.markdown("Created by [**Noah Ripstein**](https://www.noahripstein.com)")
-st.sidebar.markdown(body="""
-
-<th style="border:None"><a href="https://www.linkedin.com/in/noah-ripstein/" target="blank">
-<img align="center" src="https://bit.ly/3wCl82U" alt="linkedin_logo" height="40" width="40" /></a></th>
-
-""", unsafe_allow_html=True)
-
 # st.sidebar.image(open("app_images/tmp.png", "rb").read(), caption="GitHub Logo", width=64)
 
 # ---------------------------------- Main Body ----------------------------------
 
-st.title("What Bird is That? 🦜 📸")
+st.title("Bird Species Detection Project 🦜 📸")
 st.header("Identify what kind of bird you snapped a photo of!")
-st.write("To learn more about this website and the underlying machine learning model, "
-         "[**read the writeup.**](https://www.noahripstein.com/bird.html)")
+st.write("NRCM CSE")
 file = st.file_uploader(label="Upload an image of a bird.",
                         type=["jpg", "jpeg", "png"])
 
